@@ -1,0 +1,30 @@
+input:
+  # Local paths or HTTPS URLs are supported.
+  # You can also override these values using CLI arguments:
+  # python src/main.py --clicks clicks1.json clicks2.json --impressions impressions1.json impressions2.json
+  click_files:
+    - "https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/clicks.json"
+  impression_files:
+    - "https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/impressions.json"
+
+processing:
+  max_workers: 8
+  request_timeout_seconds: 30
+  min_advertiser_impressions: 5
+  top_n_advertisers: 5
+
+output:
+  directory: "output"
+  print_results: true
+
+logging:
+  level: "INFO"
+  # Log file is written inside the output directory.
+  file_name: "pipeline.log"
+validation:
+  # Keep validation lightweight and transparent for the test assignment.
+  drop_duplicates: true
+  fail_on_empty_input: true
+  allow_negative_revenue: true
+  fail_on_unmatched_clicks: false
+  strict_schema: true

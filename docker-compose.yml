@@ -1,0 +1,9 @@
+services:
+  appodeal-task:
+    build: .
+    container_name: appodeal-de-challenge
+    volumes:
+      - ./output:/app/output
+    environment:
+      - CONFIG_PATH=config.yaml
+    command: ["python", "src/main.py", "--config", "config.yaml"]

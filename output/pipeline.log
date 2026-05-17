@@ -1,0 +1,22 @@
+2026-05-17 11:24:24 | INFO | Log file: output/pipeline.log
+2026-05-17 11:24:24 | INFO | Starting Appodeal challenge pipeline
+2026-05-17 11:24:24 | INFO | Click sources: ['https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/clicks.json']
+2026-05-17 11:24:24 | INFO | Impression sources: ['https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/impressions.json']
+2026-05-17 11:24:24 | INFO | Reading input source: https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/clicks.json
+2026-05-17 11:24:25 | INFO | Loaded 705 records from https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/clicks.json
+2026-05-17 11:24:25 | INFO | Reading input source: https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/impressions.json
+2026-05-17 11:24:25 | INFO | Loaded 1038 records from https://gist.githubusercontent.com/mpasa/e7db25ec3d9146502cfc62384e6d315c/raw/impressions.json
+2026-05-17 11:24:25 | WARNING | impression dataset has 4 rows with null user_id
+2026-05-17 11:24:25 | WARNING | impression dataset has 5 rows with null country_code
+2026-05-17 11:24:25 | WARNING | Removed 9 rows from impression dataset because required fields were null
+2026-05-17 11:24:25 | WARNING | click dataset has 1 rows with null revenue
+2026-05-17 11:24:25 | WARNING | Removed 1 rows from click dataset because required fields were null
+2026-05-17 11:24:25 | WARNING | Click dataset contains 7 rows with negative revenue. Keeping them as possible corrections/refunds.
+2026-05-17 11:24:25 | WARNING | Removed 38 duplicate rows from impression dataset using key columns ['id']
+2026-05-17 11:24:25 | WARNING | Removed 5 duplicate rows from click dataset using key columns ['id']
+2026-05-17 11:24:25 | INFO | Validation completed. Valid impressions: 991, valid clicks: 699
+2026-05-17 11:24:25 | WARNING | Found 17 clicks without a matching impression. They will be ignored because attribution is not possible.
+2026-05-17 11:24:25 | INFO | Written output file: output/metrics_by_app_country.json
+2026-05-17 11:24:25 | INFO | Written output file: output/recommended_advertisers.json
+2026-05-17 11:24:25 | INFO | Written output file: output/median_user_spend_by_country.json
+2026-05-17 11:24:25 | INFO | Pipeline completed successfully
